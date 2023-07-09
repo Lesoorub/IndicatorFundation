@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using IndicatorFundation.Core.Frames;
-using static Frames.MainFrame.MainFrame;
 
 namespace Frames.MainFrame;
 
@@ -14,10 +13,10 @@ public partial class MainFrame
         Model model => (Model)this.frame.model.Value;
         public Logic(Frame frame) : base(frame)
         {
-            base.Start(this.Timer());
+            base.Start(this.Cycle());
         }
 
-        public IEnumerator Timer()
+        public IEnumerator Cycle()
         {
             while (this.frame.Visible)
             {

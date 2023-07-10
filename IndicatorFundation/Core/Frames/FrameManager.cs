@@ -20,8 +20,7 @@ public class FrameManager
 
             if (instance != null)
             {
-                var present = instance.present.Value;
-                var logic = instance.logic.Value;
+                var logic = instance.logic;
                 while (frame.Visible)
                 {
                     var timer = Stopwatch.StartNew();

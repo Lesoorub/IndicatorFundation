@@ -8,11 +8,10 @@ public partial class MainFrame : Frame
     public MainFrame(IGraphicDriver graphicDriver, IGraphicFrame graphicFrame) 
         : base(graphicDriver, graphicFrame)
     {
-        this.present = new Lazy<FramePresent>(() => new Present(this));
-        this.logic = new Lazy<FrameLogic>(() => new Logic(this));
-        this.model = new Lazy<IFrameModel>(() => new Model());
+        this.model = new Model();
+        this.present = new Present(this);
+        this.logic = new Logic(this);
     }
-
 
     public partial class Present : FramePresent
     {

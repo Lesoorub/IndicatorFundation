@@ -29,11 +29,6 @@ public class Window : IGraphicFrame
     public event KeyEventHandler? OnKeyDown;
     public event KeyEventHandler? OnKeyUp;
 
-    public void Close()
-    {
-        this.window.Close();
-    }
-
     public IIndicator CreateIndicator(IndicatorTransform transform, IndicatorView view)
     {
         return new Indicator(transform, view, ref this.drawables);
@@ -61,4 +56,5 @@ public class Window : IGraphicFrame
             indicator.Dispose();
         this.window.Dispose();
     }
+
 }

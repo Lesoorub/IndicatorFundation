@@ -5,9 +5,9 @@ namespace IndicatorFundation.Core.Frames;
 public abstract class Frame
 {
     public bool Visible => this.graphicFrame.Visible;
-    public Lazy<FramePresent> present = new Lazy<FramePresent>();
-    public Lazy<FrameLogic> logic = new Lazy<FrameLogic>();
-    public Lazy<IFrameModel> model = new Lazy<IFrameModel>();
+    public FramePresent present = null!;
+    public FrameLogic logic = null!;
+    public IFrameModel model = null!;
 
     public readonly IGraphicDriver graphicDriver;
     public readonly IGraphicFrame graphicFrame;

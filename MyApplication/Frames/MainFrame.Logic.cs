@@ -10,7 +10,7 @@ public partial class MainFrame
     /// </summary>
     public class Logic : FrameLogic
     {
-        Model model => (Model)this.frame.model.Value;
+        Model model => (Model)this.frame.model;
         public Logic(Frame frame) : base(frame)
         {
             base.Start(this.Cycle());
